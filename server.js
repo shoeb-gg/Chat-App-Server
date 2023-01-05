@@ -26,7 +26,7 @@ app.use(
 app.use("/auth", authRoute);
 app.use("/text", textsRoute);
 
-const socketController = require("./routes/socket");
+const socketController = require("./controllers/socket");
 
 const onConnection = (socket) => {
   socketController(io, socket);
